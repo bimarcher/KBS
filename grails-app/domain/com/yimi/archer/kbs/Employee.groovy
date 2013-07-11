@@ -18,7 +18,7 @@ class Employee {
 
     static constraints = {
         name(size: 3..20, blank: false, unique: false);
-        code(size: 7, blank: false, unique: true);
+        code(maxSize: 7, blank: false, unique: true);
         gender(inList: ["F", "M"]);
         workMail(email: true, nullable: true, maxSize: 200);
         mobilePhone(nullable: true);

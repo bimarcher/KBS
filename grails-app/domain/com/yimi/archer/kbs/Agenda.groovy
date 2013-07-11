@@ -7,7 +7,7 @@ class Agenda {
     Date startTime;         // 开始时间
     Date endTime;           // 结束时间
     Date createTime;        // 创建时间
-    Employee createByEmp;     // 创建者
+    Employee createByEmp;   // 创建者
     Employee belongToEmp;   // 所有者
 
     static belongsTo = [belongToEmp: Employee, createByEmp: Employee]
@@ -19,7 +19,6 @@ class Agenda {
         startTime(nullable: false);
         endTime(nullable: false);
         createTime(nullable: false);
-        endTime > startTime;
     }
 
     def beforeInsert = {
